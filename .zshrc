@@ -38,7 +38,7 @@ zstyle ':vcs_info:*' stagedstr '%{%F{green}%B%}●%{%b%f%}'
 zstyle ':vcs_info:*' unstagedstr '%{%F{red}%B%}●%{%b%f%}'
 zstyle ':vcs_info:*' formats '%{%F{yellow}%}%45<…<%R%<</%{%f%}%{%F{cyan}%}(%25>…>%b%<<)%{%f%}%{%F{cyan}%}%S%{%f%}%c%u'
 zstyle ':vcs_info:*' actionformats '%{%F{cyan}%}%45<…<%R%<</%{%f%}%{%F{red}%}(%a|%m)%{%f%}%{%F{cyan}%}%S%{%f%}%c%u'
-zstyle ':vcs_info:*' nvcsformats '%{%F{cyan}%}%~%{%f%}'
+zstyle ':vcs_info:*' nvcsformats '%{%F{yellow}%}%~%{%f%}'
 zstyle ':vcs_info:git:*' patch-format '%10>…>%p%<< (%n applied)'
 zstyle ':vcs_info:*+set-message:*' hooks home-path
 function +vi-home-path() {
@@ -75,5 +75,5 @@ function +vi-git-remote-staged() {
 autoload -Uz vcs_info
 function precmd() { vcs_info }
 setopt prompt_subst
-PROMPT='%(?..%{%F{red}%}%?%{%f%} )%{%F{magenta}%}%n%{%f%}@%{%F{red}%}%m%{%f%}:${vcs_info_msg_0_}%{%B%} %(!.#.%#)%{%b%E%} '
+PROMPT='%(?..%{%F{red}%}%?%{%f%} )%{%F{green}%}%n%{%f%}@%{%F{red}%}%m%{%f%}:${vcs_info_msg_0_}%{%B%} %(!.#.%#)%{%b%E%} '
 # End of lines for vcs_info prompt configuration
